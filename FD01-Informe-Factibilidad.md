@@ -10,7 +10,7 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+**Proyecto Analizador de vulnerabilidad movial**
 
 Curso: *{Nombre de Asignatura}*
 
