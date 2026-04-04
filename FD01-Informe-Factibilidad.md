@@ -96,13 +96,15 @@ Versión *{1.0}*
         1.4.2 Objetivos Específicos
             - Implementar un motor de descompilación: Se logrará extraer y analizar el código fuente y manifiestos de las aplicaciones.
             - Implementar un motor de descompilación: Se logrará extraer y analizar el código fuente y manifiestos de las aplicaciones.
-           - Desarrollar una interfaz de reporte móvil: Se logrará que el usuario visualice de forma gráfica los puntos críticos encontrados.
+            - Desarrollar una interfaz de reporte móvil: Se logrará que el usuario visualice de forma gráfica los puntos críticos encontrados.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Riesgos**
 
-    Señale los riesgos que pudieran afectar el éxito del proyecto.}*
+    * **Riesgo Tecnológico**: Cambios drásticos en las firmas de seguridad de Android e iOS que impidan la ingeniería inversa.
+    * **Riesgo de Precisión**: Generación de falsos positivos que podrían restarle credibilidad a los informes de la herramienta.
+    * **Riesgo Operativo**: Dependencia de librerías de terceros (como Apktool) que dejen de recibir soporte técnico.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
