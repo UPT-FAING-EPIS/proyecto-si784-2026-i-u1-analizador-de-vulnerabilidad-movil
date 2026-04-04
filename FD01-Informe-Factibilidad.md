@@ -10,7 +10,7 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto Analizador de vulnerabilidad movial**
+**Proyecto *{Analizador de Vulnerabilidad Movial}***
 
 Curso: *{Nombre de Asignatura}*
 
@@ -77,17 +77,26 @@ Versión *{1.0}*
 
     1.1. Nombre del proyecto
 
+        Analizador de Vulnerabilidad Móvil
+
     1.2. Duración del proyecto
+
+        1 mes y 2 semanas
 
     1.3. Descripción
 
-        En que consiste el proyecto/importancia del mismo, contexto en que se va desenvolver
+        El proyecto consiste en el desarrollo de una herramienta técnica especializada en la detección de fallos de     seguridad en aplicaciones móviles mediante el análisis de archivos de instalación (APK/IPA). Su importancia radica en proporcionar una solución automatizada para identificar permisos excesivos, secretos expuestos y configuraciones inseguras, operando en un contexto de auditoría preventiva para desarrolladores y empresas.
 
     1.4. Objetivos
 
         1.4.1 Objetivo general
+
+        Desarrollar un sistema integral de análisis de vulnerabilidades para plataformas móviles que permita fortalecer la         postura de seguridad de las aplicaciones antes de su despliegue.
+
         1.4.2 Objetivos Específicos
-            Para cada objetivo específico se indicara que se va a lograr
+            - Implementar un motor de descompilación: Se logrará extraer y analizar el código fuente y manifiestos de las aplicaciones.
+            - Implementar un motor de descompilación: Se logrará extraer y analizar el código fuente y manifiestos de las aplicaciones.
+           - Desarrollar una interfaz de reporte móvil: Se logrará que el usuario visualice de forma gráfica los puntos críticos encontrados.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
