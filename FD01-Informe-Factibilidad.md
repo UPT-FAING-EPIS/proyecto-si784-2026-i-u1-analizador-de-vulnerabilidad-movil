@@ -10,26 +10,26 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Analizador de Vulnerabilidad Movial}***
+**Proyecto *{Analizador de Vulnerabilidad Movil}***
 
-Curso: *{Nombre de Asignatura}*
+Curso: *{CALIDAD Y PRUEBAS DE SOFTWARE}*
 
-Docente: *{Nombre de Docente}*
+Docente: *{PATRICK JOSE CUADROS QUIROGA}*
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+***{Arocutipa Arocutipa Gian Franco (2023076790)}***
 
 **Tacna – Perú**
 
-***{Año}***
+***{2026}***
 
 **  
 **
 </center>
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema *{Nombre del Sistema}*
+Sistema *{Analizador de Vulnerabilidad Movil}*
 
 Informe de Factibilidad
 
