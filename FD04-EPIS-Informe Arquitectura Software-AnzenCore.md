@@ -1,4 +1,4 @@
-![C:\\Users\\EPIS\\Documents\\upt.png](media/image17.png){width="1.0926727909011373in"
+![C:\\Users\\EPIS\\Documents\\upt.png](./media2/media/image17.png){width="1.0926727909011373in"
 height="1.468837489063867in"}
 
 **UNIVERSIDAD PRIVADA DE TACNA**
@@ -292,9 +292,10 @@ Versión *{1.0}*
 > sistema. Los casos de uso centrales con mayor cobertura arquitectónica
 > son: CU-03 , CU-04/05 , CU-06 y CU-07.
 
-![](media/image16.png){width="3.46875in" height="6.718403324584427in"}
+![](./media2/media/image16.png){width="3.46875in"
+height="6.718403324584427in"}
 
-![](media/image19.png){width="3.483198818897638in"
+![](./media2/media/image19.png){width="3.483198818897638in"
 height="3.062153324584427in"}
 
 ## Vista Lógica
@@ -321,13 +322,13 @@ height="3.062153324584427in"}
 - Paquete Seguridad: Módulo de cifrado AES-256, gestión de tokens de
   sesión y TLS.
 
-![](media/image12.png){width="2.1625087489063866in"
+![](./media2/media/image12.png){width="2.1625087489063866in"
 height="5.27048665791776in"}
 
-![](media/image11.png){width="4.861509186351706in"
+![](./media2/media/image11.png){width="4.861509186351706in"
 height="4.80173665791776in"}
 
-![](media/image2.png){width="2.5416666666666665in"
+![](./media2/media/image2.png){width="2.5416666666666665in"
 height="5.291319991251093in"}
 
 ## Diagrama de Secuencia
@@ -337,10 +338,10 @@ height="5.291319991251093in"}
 > proceso de Ver Dashboard (CU-07), ya que involucran la mayor cantidad
 > de componentes del sistema.
 
-![](media/image22.png){width="6.873090551181102in"
+![](./media2/media/image22.png){width="6.873090551181102in"
 height="3.8336800087489062in"}
 
-![](media/image18.png){width="6.927577646544182in"
+![](./media2/media/image18.png){width="6.927577646544182in"
 height="3.3721544181977254in"}
 
 ## Diagrama de Colaboración
@@ -351,7 +352,7 @@ height="3.3721544181977254in"}
 > PermissionAnalyzer, AppAnalyzer, CertAnalyzer, ReportBuilder,
 > NetworkClient, API REST, Report, Vulnerability y User.
 
-![](media/image4.png){width="6.947916666666667in"
+![](./media2/media/image4.png){width="6.947916666666667in"
 height="1.812846675415573in"}
 
 ## Diagrama de Objetos
@@ -361,7 +362,7 @@ height="1.812846675415573in"}
 > análisis de seguridad, con vulnerabilidades detectadas y score
 > calculado.
 
-![](media/image13.png){width="6.885416666666667in"
+![](./media2/media/image13.png){width="6.885416666666667in"
 height="2.438862642169729in"}
 
 ## Diagrama de Clases
@@ -380,9 +381,9 @@ height="2.438862642169729in"}
 
 # 
 
-# ![](media/image14.png){width="4.989837051618547in" height="5.207216754155731in"}
+# ![](./media2/media/image14.png){width="4.989837051618547in" height="5.207216754155731in"}
 
-![](media/image9.png){width="2.7163626421697287in"
+![](./media2/media/image9.png){width="2.7163626421697287in"
 height="6.010069991251093in"}
 
 ## Diagrama de Base de Datos
@@ -394,13 +395,13 @@ height="6.010069991251093in"}
 > vulnerabilidades; cada vulnerabilidad referencia una lección
 > educativa.
 
-![](media/image5.png){width="4.721057524059493in"
+![](./media2/media/image5.png){width="4.721057524059493in"
 height="5.2265441819772525in"}
 
-![](media/image20.png){width="2.3541666666666665in"
+![](./media2/media/image20.png){width="2.3541666666666665in"
 height="5.572569991251093in"}
 
-![](media/image3.png){width="2.5244838145231845in"
+![](./media2/media/image3.png){width="2.5244838145231845in"
 height="3.225728346456693in"}
 
 # Vista de Implementación
@@ -429,7 +430,7 @@ height="3.225728346456693in"}
 - Capa APK: OSAnalyzer, PermissionAnalyzer, ReportBuilder, NetworkClient
   (Kotlin).
 
-![](media/image6.png){width="3.7744838145231845in"
+![](./media2/media/image6.png){width="3.7744838145231845in"
 height="6.324505686789151in"}
 
 ## Diagrama de Arquitectura del Sistema(Diagrama de Componentes)
@@ -437,7 +438,7 @@ height="6.324505686789151in"}
 > El diagrama de componentes muestra los módulos ejecutables principales
 > del sistema y sus interfaces de comunicación.
 
-![](media/image7.png){width="6.926042213473316in"
+![](./media2/media/image7.png){width="6.926042213473316in"
 height="4.754146981627296in"}
 
 # Vista de Procesos
@@ -459,16 +460,16 @@ height="4.754146981627296in"}
 > seguridad y completa una micro-lección para corregir una
 > vulnerabilidad detectada.
 >
-> ![](media/image15.png){width="2.6007436570428695in"
+> ![](./media2/media/image15.png){width="2.6007436570428695in"
 > height="6.124653324584427in"}
 >
-> ![](media/image21.png){width="2.5208333333333335in"
+> ![](./media2/media/image21.png){width="2.5208333333333335in"
 > height="5.822569991251093in"}
 >
-> ![](media/image1.png){width="2.519815179352581in"
+> ![](./media2/media/image1.png){width="2.519815179352581in"
 > height="5.583680008748907in"}
 >
-> ![](media/image8.png){width="4.213884514435695in"
+> ![](./media2/media/image8.png){width="4.213884514435695in"
 > height="4.83298665791776in"}
 
 # Vista de Despliegue
@@ -495,7 +496,7 @@ height="4.754146981627296in"}
 - Red de Comunicación: HTTPS/TLS 1.2+ para todas las comunicaciones
   entre nodos.
 
-![](media/image10.png){width="5.953798118985127in"
+![](./media2/media/image10.png){width="5.953798118985127in"
 height="5.26076334208224in"}
 
 # ATRIBUTOS DE CALIDAD DEL SOFTWARE

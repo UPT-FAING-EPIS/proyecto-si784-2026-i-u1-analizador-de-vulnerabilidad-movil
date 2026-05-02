@@ -1,4 +1,4 @@
-![C:\\Users\\EPIS\\Documents\\upt.png](media/image26.png){width="1.0926727909011373in"
+![C:\\Users\\EPIS\\Documents\\upt.png](./media/image26.png){width="1.0926727909011373in"
 height="1.468837489063867in"}
 
 **UNIVERSIDAD PRIVADA DE TACNA**
@@ -163,7 +163,7 @@ sin sacrificar privacidad ni requerir instalación permanente.
 
 Ejemplo:
 
-![](media/image6.png){width="6.854043088363954in"
+![](./media/image6.png){width="6.854043088363954in"
 height="1.510213254593176in"}
 
 # **[Visionamiento de la empresa]{.underline}**
@@ -246,21 +246,21 @@ El sistema propuesto es viable técnica, económica y operativamente:
 
 ## Diagrama del Proceso Actual - Diagrama de actividades
 
-![](media/image34.png){width="2.8958333333333335in"
+![](./media/image34.png){width="2.8958333333333335in"
 height="4.515625546806649in"}
 
-![](media/image14.png){width="4.055733814523185in"
+![](./media/image14.png){width="4.055733814523185in"
 height="6.500134514435696in"}
 
 ## Diagrama del Proceso Propuesto - Diagrama de actividades Inicial
 
-![](media/image33.png){width="2.3376891951006122in"
+![](./media/image33.png){width="2.3376891951006122in"
 height="5.505208880139983in"}
 
-![](media/image29.png){width="2.9367804024496937in"
+![](./media/image29.png){width="2.9367804024496937in"
 height="3.807292213473316in"}
 
-![](media/image38.png){width="2.6081036745406823in"
+![](./media/image38.png){width="2.6081036745406823in"
 height="5.057292213473316in"}
 
 # **[Especificación de Requerimientos de Software]{.underline}**
@@ -399,20 +399,20 @@ height="5.057292213473316in"}
 
 ### Diagrama de Paquetes
 
-![](media/image16.png){width="5.53668416447944in"
+![](./media/image16.png){width="5.53668416447944in"
 height="4.212694663167104in"}
 
-![](media/image27.png){width="6.267716535433071in" height="3.25in"}
+![](./media/image27.png){width="6.267716535433071in" height="3.25in"}
 
-![](media/image18.png){width="4.197916666666667in"
+![](./media/image18.png){width="4.197916666666667in"
 height="3.3020833333333335in"}
 
 ### Diagrama de Casos de Uso
 
-![](media/image35.png){width="3.3422987751531057in"
+![](./media/image35.png){width="3.3422987751531057in"
 height="5.19692804024497in"}
 
-![](media/image20.png){width="3.6973009623797024in"
+![](./media/image20.png){width="3.6973009623797024in"
 height="5.338542213473316in"}
 
 ### Escenarios Casos de Uso
@@ -486,117 +486,117 @@ height="5.338542213473316in"}
 
 > **CU-01: Registrarse**
 
-![](media/image7.png){width="4.498441601049869in"
+![](./media/image7.png){width="4.498441601049869in"
 height="6.795745844269466in"}
 
 > **CU-02: Iniciar Sesión**
 
-![](media/image19.png){width="3.9166666666666665in"
+![](./media/image19.png){width="3.9166666666666665in"
 height="7.927083333333333in"}
 
-![](media/image24.png){width="5.270833333333333in" height="4.96875in"}
+![](./media/image24.png){width="5.270833333333333in" height="4.96875in"}
 
 > **CU-03: Descargar APK Personalizada**
 
-![](media/image32.png){width="3.9270833333333335in"
+![](./media/image32.png){width="3.9270833333333335in"
 height="8.145833333333334in"}
 
-![](media/image9.png){width="6.114583333333333in"
+![](./media/image9.png){width="6.114583333333333in"
 height="8.364583333333334in"}
 
 > **CU-04/05: Analizar Dispositivo y Enviar Reporte (APK Kotlin)**
 
-![](media/image40.png){width="4.635416666666667in"
+![](./media/image40.png){width="4.635416666666667in"
 height="8.260416666666666in"}
 
-![](media/image10.png){width="3.125in" height="8.333333333333334in"}
+![](./media/image10.png){width="3.125in" height="8.333333333333334in"}
 
-![](media/image1.png){width="2.4479166666666665in" height="8.5in"}
+![](./media/image1.png){width="2.4479166666666665in" height="8.5in"}
 
 > **CU-06: Procesar Reporte y Calcular Score**
 
-![](media/image2.png){width="3.4895833333333335in"
+![](./media/image2.png){width="3.4895833333333335in"
 height="6.713542213473316in"}
 
-![](media/image12.png){width="4.239583333333333in" height="6.40625in"}
+![](./media/image12.png){width="4.239583333333333in" height="6.40625in"}
 
-![](media/image21.png){width="4.34375in" height="8.375in"}
+![](./media/image21.png){width="4.34375in" height="8.375in"}
 
 > **CU-07: Ver Dashboard**
 
-![](media/image28.png){width="4.895833333333333in"
+![](./media/image28.png){width="4.895833333333333in"
 height="8.322916666666666in"}
 
 > **CU-08: Ver Micro-Lección**
 
-![](media/image42.png){width="5.916666666666667in"
+![](./media/image42.png){width="5.916666666666667in"
 height="8.239583333333334in"}
 
 > **CU-09: Marcar Vulnerabilidad Corregida**
 
-![](media/image25.png){width="4.685444006999125in"
+![](./media/image25.png){width="4.685444006999125in"
 height="7.838542213473316in"}
 
 > **CU-10: Recalcular Ranking**
 
-![](media/image15.png){width="4.822916666666667in"
+![](./media/image15.png){width="4.822916666666667in"
 height="8.385416666666666in"}
 
 > **CU-11: Ver Historial de Análisis**
 >
-> ![](media/image37.png){width="4.572916666666667in"
+> ![](./media/image37.png){width="4.572916666666667in"
 > height="8.333333333333334in"}
 >
 > **CU-12: Solicitar Reanálisis**
 >
-> ![](media/image23.png){width="4.52442147856518in"
+> ![](./media/image23.png){width="4.52442147856518in"
 > height="6.296875546806649in"}
 
 ### Diagrama de Secuencia 
 
 > **DS-CU01: Registrarse**
 
-![](media/image41.png){width="6.267716535433071in"
+![](./media/image41.png){width="6.267716535433071in"
 height="4.930555555555555in"}
 
 > **DS-CU02: Iniciar Sesión**
 
-![](media/image3.png){width="6.267716535433071in"
+![](./media/image3.png){width="6.267716535433071in"
 height="4.666666666666667in"}
 
 > **DS-CU03: Descargar APK Personalizada**
 
-![](media/image11.png){width="6.267716535433071in"
+![](./media/image11.png){width="6.267716535433071in"
 height="3.5555555555555554in"}
 
 > **DS-CU04/05: Analizar Dispositivo y Enviar Reporte**
 
-![](media/image22.png){width="7.854166666666667in"
+![](./media/image22.png){width="7.854166666666667in"
 height="4.020608048993876in"}
 
 > **DS-CU06: Procesar Reporte y Calcular Score**
 
-![](media/image8.png){width="6.267716535433071in"
+![](./media/image8.png){width="6.267716535433071in"
 height="6.152777777777778in"}
 
 > **DS-CU07: Ver Dashboard**
 
-![](media/image36.png){width="7.734375546806649in"
+![](./media/image36.png){width="7.734375546806649in"
 height="5.698430664916885in"}
 
 > **DS-CU08: Ver Micro-Lección**
 
-![](media/image39.png){width="7.136975065616798in"
+![](./media/image39.png){width="7.136975065616798in"
 height="4.161259842519685in"}
 
 > **DS-CU09: Marcar Vulnerabilidad Corregida**
 
-![](media/image17.png){width="7.124876421697288in"
+![](./media/image17.png){width="7.124876421697288in"
 height="5.247840113735783in"}
 
 > **DS-CU10: Recalcular Ranking**
 
-![](media/image13.png){width="7.218626421697288in"
+![](./media/image13.png){width="7.218626421697288in"
 height="4.26000656167979in"}
 
 ### Diagrama de Clases
@@ -604,16 +604,16 @@ height="4.26000656167979in"}
 [[Diagrama de
 clases]{.underline}](https://mermaid.ai/d/7b3ac038-38cb-4498-a510-8404ffb50728)
 
-![](media/image31.png){width="6.276042213473316in"
+![](./media/image31.png){width="6.276042213473316in"
 height="2.5437773403324586in"}
 
-![](media/image4.png){width="7.594187445319335in"
+![](./media/image4.png){width="7.594187445319335in"
 height="2.827736220472441in"}
 
-![](media/image30.png){width="6.910205599300087in"
+![](./media/image30.png){width="6.910205599300087in"
 height="3.369792213473316in"}
 
-![](media/image5.png){width="2.6213484251968504in"
+![](./media/image5.png){width="2.6213484251968504in"
 height="5.3975010936132986in"}
 
 # **CONCLUSIONES**
