@@ -10,12 +10,15 @@ class DBManager:
             st.error("❌ Error: No se encontró DB_URL en los Secrets.")
             st.stop()
 
+    def conectar(self):
+        # Conexión directa a través del Pooler (Puerto 6543)
+        return psycopg2.connect(self.db_url)
+
     def ejecutar_query(self, query, params=None, es_select=False):
         resultado = None
         conn = None
         try:
-            # Abrimos la conexión justo antes de usarla
-            conn = psycopg2.connect(self.db_url)
+            conn = self.conectar()
             with conn.cursor(cursor_factory=RealDictCursor) as cur:
                 cur.execute(query, params)
                 if es_select:
@@ -23,9 +26,8 @@ class DBManager:
                 conn.commit()
         except Exception as e:
             if conn: conn.rollback()
-            st.error(f"Error técnico: {e}")
+            st.error(f"Error de comunicación con la base de datos: {e}")
         finally:
-            # CERRAMOS SIEMPRE (Obligatorio para el Pooler puerto 6543)
             if conn:
                 conn.close()
         return resultado
