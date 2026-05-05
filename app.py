@@ -1,42 +1,53 @@
+# app.py
 import streamlit as st
-from src.controllers.auth_controller import AuthController
-from src.controllers.scan_controller import ScanController
-from src.views.login_ui import mostrar_login
-from src.views.dashboard_ui import mostrar_dashboard_usuario
-from src.views.admin_ui import mostrar_dashboard_admin
-from src.views.theme import aplicar_estilo_personalizado
+from streamlit_autorefresh import st_autorefresh
+from src.models import AnzenModel
+from src.controllers import AnzenController
+from src.views import AnzenView
 
-# 1. Configuración de página rápida
 st.set_page_config(page_title="AnzenCore", layout="wide")
-aplicar_estilo_personalizado()
 
-# 2. Inicialización con Caché (Evita lentitud al recargar)
-@st.cache_resource
-def iniciar_controladores():
-    return AuthController(), ScanController()
+# Inicializar componentes en la sesión
+if 'model' not in st.session_state:
+    st.session_state.model = AnzenModel()
+    st.session_state.controller = AnzenController(st.session_state.model)
+    st.session_state.view = AnzenView() # Guardamos la vista en sesión
 
-auth_ctrl, scan_ctrl = iniciar_controladores()
+m = st.session_state.model
+c = st.session_state.controller
+v = st.session_state.view
 
-if 'user' not in st.session_state:
-    st.session_state.user = None
-
-if not st.session_state.user:
-    mostrar_login(auth_ctrl)
-else:
-    # Solo marcamos online una vez por sesión para no saturar la red
-    if 'online_set' not in st.session_state:
-        auth_ctrl.marcar_online(st.session_state.user['id'], True)
-        st.session_state.online_set = True
-    
-    st.sidebar.markdown("<h2 style='color:#00d4ff;'>🛡️ AnzenCore</h2>", unsafe_allow_html=True)
-    st.sidebar.write(f"Usuario: **{st.session_state.user['nombre'].upper()}**")
-    
-    if st.sidebar.button("Cerrar Sesión"):
-        auth_ctrl.marcar_online(st.session_state.user['id'], False)
-        st.session_state.clear() # Limpia todo de golpe
-        st.rerun()
-
-    if st.session_state.user['rol_id'] == 1:
-        mostrar_dashboard_admin(auth_ctrl)
+def main():
+    if 'user' not in st.session_state:
+        # Aquí es donde daba el error: ahora coinciden los 6 valores
+        u, p, b, ru, rp, rb = v.render_login()
+        
+        if b:
+            usr = c.login(u, p)
+            if usr:
+                st.session_state.user = usr
+                st.rerun()
+            else:
+                st.error("Usuario o clave incorrectos")
+        
+        if rb:
+            if c.signup(ru, rp):
+                st.success("¡Registrado! Ya puedes ingresar.")
+            else:
+                st.error("Error: El usuario ya existe.")
     else:
-        mostrar_dashboard_usuario(st.session_state.user, scan_ctrl)
+        # Refresco automático solo cuando ya están logueados
+        st_autorefresh(interval=5000, key="refresh")
+        
+        m.update_ping(st.session_state.user['id']) # Reportar presencia
+        online = c.get_live_users()
+        reports = c.get_vulnerabilities()
+        
+        if st.sidebar.button("Cerrar Sesión"):
+            del st.session_state.user
+            st.rerun()
+            
+        v.render_dashboard(st.session_state.user, online, reports)
+
+if __name__ == "__main__":
+    main()
