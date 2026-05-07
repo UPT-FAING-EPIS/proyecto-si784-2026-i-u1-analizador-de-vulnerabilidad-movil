@@ -1,6 +1,5 @@
 streamlit
-psycopg2-binary
-openai
+supabase
 pandas
-plotly
-bcrypt
+requests
+streamlit-autorefresh
