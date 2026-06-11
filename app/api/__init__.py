@@ -1,1 +1,1 @@
-"""AnzenCore API package."""
+"""API package."""

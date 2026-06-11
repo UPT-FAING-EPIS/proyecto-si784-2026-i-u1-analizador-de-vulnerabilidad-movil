@@ -1,4 +1,5 @@
 import json
+import pytest
 
 from app.dashboard.services.report_export_service import ReportExportService
 
@@ -28,3 +29,24 @@ def test_report_export_service_builds_csv():
 
     assert "severity" in text
     assert "Libreria nativa" in text
+
+def test_report_export_service_build_filename():
+    service = ReportExportService()
+    scan = {"id": "12345678-abcd", "file_name": "My App! @v1.apk"}
+    
+    filename = service.build_filename(scan, "csv")
+    
+    assert filename.startswith("anzencore_My_App___v1_")
+    assert filename.endswith(".csv")
+    assert "12345678" in filename
+
+def test_report_export_service_build_export_log():
+    service = ReportExportService()
+    scan = {"id": 101}
+    
+    log = service.build_export_log(scan, "user-1", "json", "report.json")
+    
+    assert log["scan_id"] == 101
+    assert log["user_id"] == "user-1"
+    assert log["export_format"] == "json"
+    assert log["file_name"] == "report.json"

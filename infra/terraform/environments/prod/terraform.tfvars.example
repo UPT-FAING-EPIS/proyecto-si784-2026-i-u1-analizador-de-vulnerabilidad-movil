@@ -1,7 +1,8 @@
-project_name    = "anzencore"
-environment     = "prod"
-location        = "eastus"
-supabase_url    = "https://tu-proyecto.supabase.co"
-supabase_key    = "tu_anon_key"
-dashboard_image = "mcr.microsoft.com/k8se/quickstart:latest"
-api_image       = "mcr.microsoft.com/k8se/quickstart:latest"
+# Ejemplo de archivo terraform.tfvars para el entorno de produccion
+project_name = "anzencore"
+environment  = "prod"
+location     = "eastus" # Cambia a tu region de Azure preferida
+
+# Estas variables seran inyectadas por GitHub Actions en el despliegue
+# supabase_url = "https://your-supabase-url.supabase.co"
+# supabase_key = "your-supabase-anon-key"

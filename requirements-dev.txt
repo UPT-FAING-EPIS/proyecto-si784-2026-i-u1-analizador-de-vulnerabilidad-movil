@@ -1,4 +1,11 @@
--r requirements.txt
+pytest
+pytest-cov
 behave
+playwright
+httpx
+pandas
+fastapi
 mutmut
-pytest-playwright
+supabase
+streamlit
+streamlit-autorefresh

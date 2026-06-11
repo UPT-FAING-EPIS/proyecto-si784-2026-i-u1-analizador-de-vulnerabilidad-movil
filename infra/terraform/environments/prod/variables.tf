@@ -1,34 +1,29 @@
 variable "project_name" {
-  type    = string
-  default = "anzencore"
+  type        = string
+  description = "Nombre base del proyecto."
+  default     = "anzencore" # Valor por defecto, puede ser sobreescrito
 }
 
 variable "environment" {
-  type    = string
-  default = "prod"
+  type        = string
+  description = "Ambiente de despliegue (ej. prod, dev)."
+  default     = "prod" # Valor por defecto, puede ser sobreescrito
 }
 
 variable "location" {
-  type    = string
-  default = "eastus"
+  type        = string
+  description = "Region de Azure para el despliegue."
+  default     = "eastus" # Puedes cambiar a tu region preferida
 }
 
 variable "supabase_url" {
-  type      = string
-  sensitive = true
+  type        = string
+  sensitive   = true
+  description = "URL del proyecto Supabase."
 }
 
 variable "supabase_key" {
-  type      = string
-  sensitive = true
-}
-
-variable "dashboard_image" {
-  type    = string
-  default = "mcr.microsoft.com/k8se/quickstart:latest"
-}
-
-variable "api_image" {
-  type    = string
-  default = "mcr.microsoft.com/k8se/quickstart:latest"
+  type        = string
+  sensitive   = true
+  description = "Anon key de Supabase."
 }
