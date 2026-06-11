@@ -1,9 +1,6 @@
 [run]
 branch = True
 source =
-    src
-    agent
-    mobile
     app
 
 omit =
