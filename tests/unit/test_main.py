@@ -1,5 +1,7 @@
 import pytest
 from unittest.mock import MagicMock, patch
+import streamlit as st
+st.fragment = lambda *args, **kwargs: lambda f: f
 from app.dashboard.main import bootstrap, main
 
 class MockSessionState(dict):
@@ -45,10 +47,9 @@ def test_main_login_flow(mock_st_global, mock_bootstrap, mock_session_state):
     mock_st_global.rerun.assert_called_once()
 
 @patch("app.dashboard.main.st.session_state", new_callable=MockSessionState)
-@patch("app.dashboard.main.st_autorefresh")
 @patch("app.dashboard.main.bootstrap")
 @patch("app.dashboard.main.st")
-def test_main_login_failure_flow(mock_st_global, mock_bootstrap, mock_autorefresh, mock_session_state): # Orden corregido
+def test_main_login_failure_flow(mock_st_global, mock_bootstrap, mock_session_state): # Orden corregido
     mock_session_state.controller = MagicMock()
     mock_session_state.view = MagicMock()
     mock_session_state.view.render_login.return_value = ("u", "p", True, "nu", "np", False)
@@ -86,12 +87,12 @@ def test_main_signup_failure_flow(mock_st_global, mock_bootstrap, mock_session_s
     mock_st_global.error.assert_called_once_with("El usuario ya existe.")
 
 @patch("app.dashboard.main.st.session_state", new_callable=MockSessionState)
-@patch("app.dashboard.main.st_autorefresh")
 @patch("app.dashboard.main.bootstrap")
 @patch("app.dashboard.main.st")
-def test_main_dashboard_flow(mock_st_global, mock_autorefresh, mock_bootstrap, mock_session_state):
+def test_main_dashboard_flow(mock_st_global, mock_bootstrap, mock_session_state):
     mock_st_global.session_state = mock_session_state
     mock_session_state.user = {"id": 1, "username": "admin"}
+    mock_session_state.nav_section = "inicio"
     mock_session_state.controller = MagicMock()
     mock_session_state.view = MagicMock()
     mock_session_state.view.render_sidebar.return_value = False
@@ -103,11 +104,11 @@ def test_main_dashboard_flow(mock_st_global, mock_autorefresh, mock_bootstrap, m
     mock_session_state.view.render_dashboard.assert_called_once()
 
 @patch("app.dashboard.main.st.session_state", new_callable=MockSessionState)
-@patch("app.dashboard.main.st_autorefresh")
 @patch("app.dashboard.main.bootstrap")
 @patch("app.dashboard.main.st")
-def test_main_logout_flow(mock_st_global, mock_autorefresh, mock_bootstrap, mock_session_state):
+def test_main_logout_flow(mock_st_global, mock_bootstrap, mock_session_state):
     mock_session_state.user = {"id": 1, "username": "admin"}
+    mock_session_state.nav_section = "inicio"
     mock_session_state.controller = MagicMock()
     mock_session_state.view = MagicMock()
     mock_session_state.view.render_sidebar.return_value = True 

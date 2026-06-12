@@ -56,7 +56,7 @@ def test_fetch_online_list(controller, mock_model):
 def test_fetch_all_reports(controller, mock_model):
     mock_model.get_vulnerabilities.return_value.data = [{"id": 1}]
     
-    reports = controller.fetch_all_reports()
+    reports = controller.fetch_all_reports("user-123")
     assert len(reports) == 1
 
 def test_update_ping(controller, mock_model):
@@ -67,7 +67,7 @@ def test_update_ping(controller, mock_model):
 def test_scan_vulnerabilities(controller):
     with patch.object(controller.vulnerability_scanner, 'scan') as mock_scan:
         mock_scan.return_value = [{"vuln": "test"}]
-        res = controller.scan_vulnerabilities("127.0.0.1")
+        res = controller.scan_vulnerabilities("user-123", "127.0.0.1")
         assert res == [{"vuln": "test"}]
         mock_scan.assert_called_once_with("127.0.0.1")
 
@@ -76,7 +76,7 @@ def test_fetch_methods(controller, mock_model):
     mock_model.get_apk_findings.return_value.data = []
     mock_model.get_apk_artifacts.return_value.data = []
     
-    assert controller.fetch_apk_scans() == []
+    assert controller.fetch_apk_scans("user-123") == []
     assert controller.fetch_apk_findings(1) == []
     assert controller.fetch_apk_artifacts(1) == []
 

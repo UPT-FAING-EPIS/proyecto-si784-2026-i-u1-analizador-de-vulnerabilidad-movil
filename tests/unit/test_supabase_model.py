@@ -29,15 +29,18 @@ def test_update_ping(mock_supabase):
 
 def test_get_vulnerabilities(mock_supabase):
     model = SupabaseModel()
-    model.get_vulnerabilities()
+    model.get_vulnerabilities("user-123")
+    mock_supabase.table.assert_called_with("vulnerabilidades")
     mock_supabase.table.return_value.select.assert_called_with("*")
-    mock_supabase.table.return_value.select.return_value.order.assert_called_with("fecha", desc=True)
+    mock_supabase.table.return_value.select.return_value.eq.assert_called_with("user_id", "user-123")
+    mock_supabase.table.return_value.select.return_value.eq.return_value.order.assert_called_with("fecha", desc=True)
 
 def test_apk_operations(mock_supabase):
     model = SupabaseModel()
     
-    model.get_apk_scans()
-    mock_supabase.table.assert_any_call("apk_scan_summary")
+    model.get_apk_scans("user-123")
+    mock_supabase.table.assert_any_call("apk_scans")
+    mock_supabase.table.return_value.select.return_value.eq.assert_any_call("user_id", "user-123")
     
     model.create_apk_scan({"test": 1})
     mock_supabase.table.return_value.insert.assert_called_with({"test": 1})
