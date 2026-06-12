@@ -4,6 +4,7 @@ pandas
 requests
 streamlit-autorefresh
 fastapi
+python-multipart
 uvicorn
 pydantic
 pytest
